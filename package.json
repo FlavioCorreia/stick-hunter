@@ -1,0 +1,19 @@
+{
+  "name": "stick-hunter",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["apps/client", "packages/*"],
+  "scripts": {
+    "dev": "npm run dev -w @stick-hunter/client",
+    "build": "npm run build -w @stick-hunter/client",
+    "typecheck": "tsc --noEmit -p apps/client/tsconfig.json && tsc --noEmit -p packages/game-core/tsconfig.json",
+    "test": "vitest run",
+    "preview": "npm run preview -w @stick-hunter/client"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6",
+    "vitest": "^3.1.1"
+  }
+}
